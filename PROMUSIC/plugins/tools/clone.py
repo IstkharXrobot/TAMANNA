@@ -25,7 +25,7 @@ from PROMUSIC.utils.decorators.language import language
 from datetime import datetime
 CLONES = set()
 
-C_BOT_DESC = "Wᴀɴᴛ ᴀ ʙᴏᴛ ʟɪᴋᴇ ᴛʜɪs? Cʟᴏɴᴇ ɪᴛ ɴᴏᴡ! ✅\n\nVɪsɪᴛ: @ll_ISTKHAR_BABY_lll ᴛᴏ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!\n\n - Uᴘᴅᴀᴛᴇ: @THUNDERDEVS\n - Sᴜᴘᴘᴏʀᴛ: @THUNDERDEVS"
+C_BOT_DESC = "Wᴀɴᴛ ᴀ ʙᴏᴛ ʟɪᴋᴇ ᴛʜɪs? Cʟᴏɴᴇ ɪᴛ ɴᴏᴡ! ✅\n\nVɪsɪᴛ: @ll_ISTKHAR_BABY_lll ᴛᴏ ɢᴇᴛ sᴛᴀʀᴛᴇᴅ!\n\n - Uᴘᴅᴀᴛᴇ: @ARISHFA_UPDATE\n - Sᴜᴘᴘᴏʀᴛ: @THUNDERDEVS"
 
 C_BOT_COMMANDS = [
                 {"command": "/start", "description": "sᴛᴀʀᴛs ᴛʜᴇ ᴍᴜsɪᴄ ʙᴏᴛ"},
@@ -103,7 +103,7 @@ async def clone_txt(client, message, _):
                 "token": bot_token,
                 "username": bot.username,
                 "channel": "THUNDERDEVS",
-                "support": "THUNDER_SUPPORT_ll",
+                "support": "ARISHFA_UPDATE",
                 "premium" : False,
                 "Date" : False,
             }
@@ -138,7 +138,7 @@ async def clone_txt(client, message, _):
         except BaseException as e:
             logging.exception("Error while cloning bot.")
             await mi.edit_text(
-                f"⚠️ <b>ᴇʀʀᴏʀ:</b>\n\n<code>{e}</code>\n\n**ᴋɪɴᴅʟʏ ғᴏᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ @Legend_mickey ᴛᴏ ɢᴇᴛ ᴀssɪsᴛᴀɴᴄᴇ**"
+                f"⚠️ <b>ᴇʀʀᴏʀ:</b>\n\n<code>{e}</code>\n\n**ᴋɪɴᴅʟʏ ғᴏᴡᴀʀᴅ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ @ll_ISTKHAR_BABY_lll ᴛᴏ ɢᴇᴛ ᴀssɪsᴛᴀɴᴄᴇ**"
             )
     else:
         await message.reply_text(_["C_B_H_1"])
@@ -226,7 +226,7 @@ async def restart_bots():
             await asyncio.sleep(5)
 
         await app.send_message(
-                CLONE_LOGGER, f"All Cloned Bots Started !"
+                CLONE_LOGGER, f"ISTKHAR ALL CLONE BOT STARTED !"
             )
     except Exception as e:
         logging.exception("Error while restarting bots.")
@@ -298,7 +298,7 @@ async def my_cloned_bots(client, message, _):
         await message.reply_text("An error occurred while fetching your cloned bots.")
 
 
-@app.on_message(filters.command("cloned"))
+@app.on_message(filters.command("istkhar"))
 @language
 async def list_cloned_bots(client, message, _):
     try:
